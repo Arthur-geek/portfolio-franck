@@ -13,21 +13,41 @@ header{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    align-items: center;
+    align-items: center; 
 }
 .navbar a {
-    color: white;
+    font-size: 18px;
+    color: #a0a0a0;
+    position: relative;
+    padding: 0 10px;
 }
 
 .navbar .logo{
     font-size: 2em;
     font-weight: bold;
+    color: white;
 }
 .navbar .nav-links ul{
     display: flex;
 }
 .navbar .nav-links ul li {
     margin: 0 25px;
+}
+.navbar a::after{
+    content: "";
+    position: absolute;
+    background-color: var(--main-txt-color);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+.navbar a:hover{
+    color: white;
+}
+.navbar a:hover::after{
+    width: 100%;
 }
 .navbar .menu-hamburger{
     display: none;
@@ -60,20 +80,67 @@ header{
     top: 150px;
     left: 7%;
 }
-.intro,.work {
+.intro {
     font-size: 20px;
     font-weight: 600;
     color: white;
+}
+.wrapper{
+    display: inline-flex;
+}
+.wrapper .txt-static{
+    font-weight: 500;
+    color: white;
+    font-size: 40px;
+}
+.wrapper .txt-dynamic{
+    margin-left: 15px;
+    line-height: 60px;
+    height: 60px;
+    overflow: hidden;
+}
+.txt-dynamic li{
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--main-txt-color);
+    position: relative;
+    top: 0;
+    animation: slide 6s steps(3) infinite;
+}
+
+
+@keyframes slide{
+    100%{
+        top: -180px;
+    }
+}
+.txt-dynamic li span{
+    position: relative;
+}
+.txt-dynamic li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--main-bg-color);
+    border-left: 2px solid var(--main-txt-color);
+    animation: typing 2s steps(9) infinite;
+}
+@keyframes typing{
+    100%{
+        left: 100%;
+        margin: 0 -38px 0 35px;
+    }
 }
 .name{
     font-size: 64px;
     font-weight: 600;
     color: white;
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.5),
+                -2px -2px 2px   rgba(00, 00, 00, 0.2);
 }
-.work a{
-    font-size: 38px;
-    color: var(--main-txt-color);
-}
+
 .text{
     font-weight: 400;
     font-size: 14;
