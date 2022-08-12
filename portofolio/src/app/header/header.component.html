@@ -1,6 +1,6 @@
 <nav class="navbar">
     <a class="logo" href="">A</a>
-    <div class="nav-links">
+    <div class="nav-links {{ myClass }}" >
         <ul>
             <li><a href="">About</a></li>
         
@@ -12,4 +12,25 @@
             <li><a href="">Contact</a></li>
         </ul>
     </div>
+     <img (click)="toggleMenu()" src="/assets/images/{{image}}.png" alt="menu button" class="menu-hamburger" width="20px">
+  
 </nav>
+<div class="home">
+    <div class="description">
+        <div class="presentation">
+            <div class="intro">Hello my name is</div>
+            <div class="name">Franck Arthur KOUNKORGO</div>
+            <div class="work">And I am a  <a> Developer</a></div>
+            <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate in sed ipsa voluptatum dignissimos <br> accusantium incidunt, dolorum, quibusdam, vero aperiam vitae? Quod quo perferendis facere.</div>
+            <div class="hire-me"><a href="#">Hire me !</a></div>
+        </div>
+    </div>
+    <div class="email">
+        <a href="">kofrathur@gmail.com</a>
+        <div class="button-group">
+            <div class="link1"><a href=""><img src="/assets/images/github.png" alt="icon"></a></div>
+            <div class="link2"><a href=""><img src="/assets/images/stackoverflow.png" alt="icon"></a></div>
+            <div class="link3"><a href=""><img src="/assets/images/linkedin.png" alt="icon"></a></div>
+        </div>
+    </div>
+</div>

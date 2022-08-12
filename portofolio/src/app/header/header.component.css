@@ -1,3 +1,7 @@
+:root {
+    --main-bg-color: #303030;
+    --main-txt-color: #f6bd60;
+  }
 header{
     height: 100vh;
     width: 100vw;
@@ -25,8 +29,139 @@ header{
 .navbar .nav-links ul li {
     margin: 0 25px;
 }
+.navbar .menu-hamburger{
+    display: none;
+    width: 35px;
+    position: absolute;
+    top: 55px;
+    right: 25px;
+    color: white;
+}
+.mobile-menu{
+    margin-left: 0; 
+}
+/*---------------------------------------*/
+.home{
+    top: 100px;
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 100px);
+}
+.description,.email{
+    height: calc(100vh - 100px);
+}
+.description{
+    background-color:var(--main-bg-color);
+    float: left;
+    width: calc(100% - 70px);
+}
+.presentation{
+    position: absolute;
+    top: 150px;
+    left: 7%;
+}
+.intro,.work {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+.name{
+    font-size: 64px;
+    font-weight: 600;
+    color: white;
+}
+.work a{
+    font-size: 38px;
+    color: var(--main-txt-color);
+}
+.text{
+    font-weight: 400;
+    font-size: 14;
+    color: white;
+}
+.email{
+    background-color:var(--main-bg-color);
+    float: right;
+    width: 70px;
+    writing-mode: vertical-rl;
+   /* text-orientation: upright;*/
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-right: 15px;
+    border-left: 2px solid whitesmoke;
+}
+.hire-me{
+    border: 1px solid var(--main-txt-color);
+    margin-top: 15px;
+    padding: 7px 7px 7px 17px;
+    width: 110px;
+    background-color: var(--main-txt-color);
+    border-radius: 15px;
+    
+}
+.hire-me a{
+    color: black;
+    font-size: 16;
+    font-weight: 500;
+}
+.button-group{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 70px;
+    vertical-align: middle;
+    float: none;
+    border-left: 2px solid whitesmoke;
+}
+.link1,.link2,.link3{
+    width: 100%;
+    height: 50px;
+    display: inline-block;
+    padding-right: 20px;
+    background-color: var(--main-bg-color);
+}
+
+.email a{
+    
+    color: rgb(255, 255, 255);
+}
+
 @media screen and (max-width: 900px){
+    .navbar .logo{
+        position: absolute;
+        top: 50px;
+        left: 30px;
+    }
+    .navbar .menu-hamburger{
+        display: block;
+    }
     .nav-links{
-        display: none ;
+        top: 0;
+        left: 0;
+        background-color: rgba(63, 21, 21, 0.119);
+        backdrop-filter: blur(7px);
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+    .nav-links.mobile-menu{
+        margin-left: 0;
+    }
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar .nav-links ul li{
+        margin: 25px 0;
+        font-size: 1.2em;
     }
 }

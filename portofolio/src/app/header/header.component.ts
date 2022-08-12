@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  //@HostBinding('class.mobile-menu') menuOpened = false;
+  myClass: string ="";
+  isTapped:boolean=false;
+  image:string="menu";
+  constructor() { 
+    
+  }
 
   ngOnInit(): void {
   }
+
+  toggleMenu() {
+    this.isTapped = !this.isTapped;
+    if(this.isTapped==true){
+      this.myClass = "mobile-menu";
+      this.image="close";
+    }else{
+      this.myClass="";
+      this.image="menu";
+    }
+  }
+ 
+
 
 }
