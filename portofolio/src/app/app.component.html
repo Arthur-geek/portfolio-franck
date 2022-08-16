@@ -1,1 +1,18 @@
-<app-skills></app-skills>
+<nav class="navbar">
+    <a class="logo" (click)="load()" routerLink="header">A</a>
+    <div class="nav-links {{ myClass }}" >
+        <ul>
+            <li><a (click)="load()" routerLink="header">Home</a></li>
+            <li><a routerLink="about">About</a></li>
+        
+            <li><a routerLink="skills">Skills</a></li>
+        
+            <li><a routerLink="experience">Experience</a></li>
+        
+            <li><a routerLink="contact">Contact</a></li>
+        </ul>
+    </div>
+     <img (click)="toggleMenu()" src="/assets/images/{{image}}.png" alt="menu button" class="menu-hamburger" width="20px">
+  
+</nav>
+<router-outlet></router-outlet>

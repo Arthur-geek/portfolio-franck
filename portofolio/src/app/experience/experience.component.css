@@ -9,6 +9,7 @@
   }
   .timeline {
     width: 80%;
+    padding-top: 110px;
     height: auto;
     max-width: 800px;
     margin: 0 auto;

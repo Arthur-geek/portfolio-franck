@@ -8,6 +8,16 @@ import { ServiceComponent } from './service/service.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { SkillsComponent } from './skills/skills.component';
 import { AboutComponent } from './about/about.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoutes: Routes =[
+  {path: 'header', component: HeaderComponent},
+  {path: 'about', component: AboutComponent},
+  {path: 'skills', component: SkillsComponent},
+  {path: 'experience', component: ExperienceComponent},
+  {path: 'contact', component: FooterComponent},
+  {path: '', component: HeaderComponent},
+];
 
 @NgModule({
   declarations: [
@@ -22,6 +32,7 @@ import { AboutComponent } from './about/about.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
