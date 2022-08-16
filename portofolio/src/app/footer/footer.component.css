@@ -1,13 +1,93 @@
+:root {
+    --main-bg-color: #303030;
+    --main-txt-color: #f6bd60;
+  }
+.contact-section{
+    margin-top: 30px;
+    width: 100%;
+    height: 400px;
+    display: grid;
+    align-items: center;
+}
+.contact-in{
+    width: 80%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+   
+}
+
+.contact-map{
+    width: 100%;
+    height: auto;
+    flex: 50%;
+}
+.contact-map iframe{
+    width: 100%;
+    height: 100%;
+}
+.contact-form{
+    width: 100%;
+    height: auto;
+    flex: 50%;
+    padding: 30px;
+}
+.contact-form h1{
+    margin-bottom: 7px;
+    color: white;
+}
+.contact-form-txt{
+    width: 100%;
+    height: 40px;
+    color: rgb(255, 255, 255);
+    border: 1px solid var(--main-txt-color);
+    border-radius: 8px;
+    outline: none;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: var(--main-bg-color);
+}
+
+.txt-area{
+    width: 100%;
+    height: 100px;
+    color: rgb(255, 255, 255);
+    border: 1px solid var(--main-txt-color);
+    border-radius: 8px;
+    outline: none;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: var(--main-bg-color);
+    resize: none;
+}
+.btn-submit{
+    width: 100px;
+    border: 1px solid var(--main-txt-color);
+    outline: none;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    height: 40px;
+    background-color: var(--main-bg-color);
+    border-radius: 7px;
+    cursor: pointer;
+}
+.btn-submit:hover{
+    background-color: var(--main-txt-color);
+    transition: 0.3s ease;
+}
+
 footer{
+    bottom: 0;
+    position: absolute;
+    border-top: 2px solid white;
     height: auto;
     width: 100vw;
     font-family: 'Poppins' sans-serif;
     padding-top: 40px;
     color: #fff;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    position: absolute;
 }
 .footer-content{
     display: flex;
@@ -62,4 +142,17 @@ footer{
     text-transform: uppercase;
     opacity: .4;
     font-weight: 200;
+}
+@media only screen and (max-height:900px) {
+    footer{
+        border-top: none;
+    }
+    .footer-content{
+        display: none;
+    }
+}
+@media only screen and (max-width:612px){
+    .contact-form h1{
+        font-size: 18px;
+    }
 }

@@ -1,0 +1,43 @@
+.container{
+    /**/
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+.card{
+    color: white;
+    width: 20%;
+    height: 250px;
+    background: #303030;
+    border: 1px solid #303030;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    border-radius: 15px;
+    box-shadow: 16px 14px 20px rgba(0, 0, 0, 0.2);
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+}
+.card img{
+    padding-top: 20px;
+}
+.card p{
+    padding-top: 30px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+@media screen and (max-width:1000px) {
+    .card{
+        width: 40%;
+    }
+}
+@media screen and (max-width:620px) {
+    .card{
+        width: 75%;
+    }
+}

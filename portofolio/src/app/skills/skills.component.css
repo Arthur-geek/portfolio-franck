@@ -1,0 +1,273 @@
+:root {
+    --main-bg-color: #303030;
+    --main-txt-color: #f6bd60;
+  }
+.body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    max-width: 950px;
+    width: 100%;
+    background: var(--main-bg-color);
+    padding: 30px 30px 30px 30px;
+    color: white;
+    margin: 0 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+@media only screen and (max-width:810px) {
+    .container{
+        box-shadow: 0 0 0;
+    }
+}
+.container .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container .content .list{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 20%;
+    margin-right: 50px;
+}
+.container .list label{
+    height: 60px;
+    /*background: red;*/
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 60px;
+    padding-left: 25px;
+    cursor: pointer;
+    z-index: 12;
+    border-left: 2px solid rgb(84, 81, 81);
+}
+.content .indicator{
+    height: 60px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    border-left: 8px solid var(--main-txt-color);
+    transition: all 0.4s ease;
+}
+#tab1:checked ~ .list .indicator{
+    top: 0;
+}
+#tab2:checked ~ .list .indicator{
+    top: 60px;
+}
+#tab3:checked ~ .list .indicator{
+    top: 120px;
+}
+#tab4:checked ~ .list .indicator{
+    top: 180px;
+}
+.container input[type="radio"]{
+    display: none;
+}
+.content .text-content .text{
+    display: none;
+}
+.content .text-content .tab1{
+    display: block;
+}
+.container .content .text-content{
+    width: 80%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+
+#tab1:checked ~ .text-content .tab1,
+#tab2:checked ~ .text-content .tab2,
+#tab3:checked ~ .text-content .tab3,
+#tab4:checked ~ .text-content .tab4{
+    display: block;
+}
+
+#tab2:checked ~ .text-content .tab1,
+#tab3:checked ~ .text-content .tab1,
+#tab4:checked ~ .text-content .tab1{
+    display: none;
+}
+
+
+::selection{
+    color:var(--main-bg-color);
+    background: #6665ee;
+  }
+  .skill-bars{
+    padding: 25px 30px;
+    width: 600px;
+    background: var(--main-bg-color);
+    border-radius: 10px;
+  }
+  .skill-bars .bar{
+    margin: 20px 0;
+  }
+  .skill-bars .bar:first-child{
+    margin-top: 0px;
+  }
+  .skill-bars .bar .info{
+    margin-bottom: 5px;
+  }
+  .skill-bars .bar .info span{
+    font-weight: 500;
+    font-size: 17px;
+    opacity: 0;
+    animation: showText 0.5s 1s linear forwards;
+  }
+  @keyframes showText {
+    100%{
+      opacity: 1;
+    }
+  }
+  .skill-bars .bar .progress-line{
+    height: 10px;
+    width: 100%;
+    background: #f0f0f0;
+    position: relative;
+    transform: scaleX(0);
+    transform-origin: left;
+    border-radius: 10px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.05),
+                0 1px rgba(255,255,255,0.8);
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+  }
+  @keyframes animate {
+    100%{
+      transform: scaleX(1);
+    }
+  }
+  .bar .progress-line span{
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: var(--main-txt-color);
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+  }
+  .bar .progress-line.web span{
+    width: 90%;
+  }
+  .bar .progress-line.angular span{
+    width: 40%;
+  }
+  .bar .progress-line.tail span{
+    width: 78%;
+  }
+  .bar .progress-line.react span{
+    width: 35%;
+  }
+  .bar .progress-line.java1 span{
+    width: 50%;
+  }
+  .bar .progress-line.flutter span{
+    width: 89%;
+  }
+  .bar .progress-line.mysql span{
+    width: 75%;
+  }
+
+  .bar .progress-line.java2 span{
+    width: 70%;
+  }
+  .bar .progress-line.python span{
+    width: 78%;
+  }
+  .bar .progress-line.c span{
+    width: 65%;
+  }
+  .bar .progress-line.vba span{
+    width: 83%;
+  }
+  .bar .progress-line.django span{
+    width: 67%;
+  }
+  .bar .progress-line.laravel span{
+    width: 54%;
+  }
+  .bar .progress-line.node span{
+    width: 26%;
+  }
+  .progress-line span::before{
+    position: absolute;
+    content: "";
+    top: -10px;
+    right: 0;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+  }
+  .progress-line span::after{
+    position: absolute;
+    top: -28px;
+    right: 0;
+    font-weight: 500;
+    background: #000;
+    color: #fff;
+    padding: 1px 8px;
+    font-size: 12px;
+    border-radius: 3px;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+  }
+  @keyframes showText2 {
+    100%{
+      opacity: 1;
+    }
+  }
+  .progress-line.web span::after{
+    content: "90%";
+  }
+  .progress-line.angular span::after{
+    content: "40%";
+  }
+  .progress-line.tail span::after{
+    content: "78%";
+  }
+  .progress-line.react span::after{
+    content: "35%";
+  }
+  .progress-line.mysql span::after{
+    content: "75%";
+  }
+  .progress-line.java1 span::after{
+    content: "50%";
+  }
+  .progress-line.flutter span::after{
+    content: "89%";
+  }
+  .progress-line.java2 span::after{
+    content: "70%";
+  }
+  .progress-line.python span::after{
+    content: "78%";
+  }
+  .progress-line.c span::after{
+    content: "65%";
+  }
+  .progress-line.vba span::after{
+    content: "83%";
+  }
+  .progress-line.django span::after{
+    content: "67%";
+  }
+  .progress-line.laravel span::after{
+    content: "54%";
+  }
+  .progress-line.vba span::after{
+    content: "26%";
+  }
