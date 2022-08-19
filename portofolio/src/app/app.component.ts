@@ -23,8 +23,8 @@ export class AppComponent implements OnInit {
     body.appendChild(script);
   }
   ngOnInit(){
-    this.loadScript('../assets/js/particles.min.js');
-    this.loadScript('../assets/js/app.js');
+    this.loadScript('./assets/js/particles.min.js');
+    this.loadScript('./assets/js/app.js');
   }
 
   constructor() { 
@@ -32,8 +32,8 @@ export class AppComponent implements OnInit {
   }
 
   load(){
-    this.loadScript('../assets/js/particles.min.js');
-    this.loadScript('../assets/js/app.js');
+    this.loadScript('./assets/js/particles.min.js');
+    this.loadScript('./assets/js/app.js');
   }
 
   toggleMenu() {
